@@ -110,3 +110,4 @@ class AgentPermissionMarker(models.Model):
             ("can_refund_payment", "Can use agent tool: request a payment refund"),
             ("can_email_customer", "Can use agent tool: send a customer email"),
         ]
+
