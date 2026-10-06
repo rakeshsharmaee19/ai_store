@@ -154,6 +154,8 @@ class RefundPaymentView(APIView):
         serializer = RefundRequestSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
 
+        print(request.data)
+
         payment = PaymentTransaction.objects.get(id=pk)
         refund = refund_payment(
             payment=payment,
