@@ -34,6 +34,7 @@ class OrderViewSet(mixins.CreateModelMixin, mixins.ListModelMixin, mixins.Retrie
 
     @action(detail=True, methods=["post"])
     def cancel(self, request, pk=None):
-        order = self.get_object()
+        order = self.get_object()w
+        print("inside")
         order = cancel_order(order=order)
         return Response(OrderSerializer(order).data)
